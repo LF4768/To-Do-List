@@ -162,9 +162,10 @@ function dialogBoxes() {
             let day = currentTime.getDate();
             let month = currentTime.getMonth() + 1;
             let year = currentTime.getFullYear();
-            let date = year + "-" + "0" + month + "-" + day
+            let date = year + "-" + "0" + month + "-" + "0" + day
             
             if(todoDueDate.value < date) {
+                console.log(todoDueDate.value, date)
                 window.alert("Due Date cannot be less than current date!")
             } else if(todoName.value === ""  || todoPriority.value === "") {
                 window.alert("No Value Given!")
